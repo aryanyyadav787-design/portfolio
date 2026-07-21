@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Yadav | Portfolio 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Add FontAwesome for some quick icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Speedometer Loader -->
+    <div id="loader" class="loader-container">
+        <div class="speedo-ring"></div>
+        <div class="speedo-needle"></div>
+        <div class="speedo-text"><span id="load-num">0</span><span class="unit">KM/H</span></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 1. Instrument Cluster Navigation -->
+    <nav class="instrument-cluster-nav">
+        <div class="nav-branding">
+            <span class="red-dot"></span> 
+            <span class="brand-name">Aryan Yadav</span>
+        </div>
+        
+        <div class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+
+            <a href="#driven-by-aryan">Driven</a>
+            <a href="#uiux">UI/UX</a>
+            <a href="#photography">Photography</a>
+            <a href="#experience">Experience</a>
+
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-time" id="live-time">00:00</div>
+    </nav>
+
+    <main>
+        <!-- --- 2. Hero Section --- -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&h=1080&fit=crop&auto=format&q=90" alt="Performance sports car">
+                <div class="bg-gradient-bottom"></div>
+                <div class="bg-gradient-sides"></div>
+            </div>
+
+            <!-- Cursor-reactive studio lighting is handled via JS (ambientLight) -->
+            <div class="ambient-light"></div>
+
+            <div class="hero-content">
+                <div class="hero-portfolio-tag gs-reveal-hero">
+                    <div class="line"></div>
+                    <span>Portfolio — 2026</span>
+                    <div class="line"></div>
+                </div>
+
+                <h1 class="hero-title gs-reveal-hero">ARYAN</h1>
+                <h1 class="hero-subtitle gs-reveal-hero">YADAV</h1>
+
+                <div class="hero-roles gs-reveal-hero">
+                    <span class="role-tag">Automotive Journalist</span>
+                    <span class="role-dot"></span>
+                    <span class="role-tag">UI/UX Designer</span>
+                    <span class="role-dot"></span>
+                    <span class="role-tag">CS Student</span>
+                </div>
+
+                <p class="hero-quote gs-reveal-hero">"Designing experiences. Driving stories."</p>
+
+                <div class="hero-ctas gs-reveal-hero">
+                    <a href="#automotive" class="cta-red">View Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#about" class="cta-outline">About Me</a>
+                </div>
+            </div>
+            
+            <div class="scroll-hint gs-reveal-hero">
+                <span>Scroll</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>        <!-- --- 3. Stats Strip --- -->
+        <div class="stats-strip gs-reveal">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <div class="stat-n">5+</div>
+                    <div class="stat-l">Published Articles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-n">5+</div>
+                    <div class="stat-l">Design Projects</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- --- 4. About Me --- -->
+        <section id="about" class="about-section">
+            <div class="container about-layout">
+                <div class="about-image-col gs-reveal">
+                    <div class="about-img-wrapper">
+                        <img src="assets/aryan_portrait.png" alt="Aryan Yadav portrait">
+                        <div class="img-gradient"></div>
+                    </div>
+                    <div class="red-bar"></div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i> Meerut, India
+                    </div>
+                </div>
+                
+                <div class="about-text-col gs-reveal">
+                    <div class="section-tag">About</div>
+                    <h2 class="section-heading-large">Where Code<br><span class="muted">Meets Asphalt.</span></h2>
+                    
+                    <div class="about-paragraphs">
+                        <p>Design and automobiles may seem like different worlds, but to me, they're built on the same principle: every detail matters.</p>
+                        <p>I'm Aryan, a UI/UX designer, engineering student, and automotive journalist who enjoys creating products that people don't have to think about using. From interactive interfaces to car reviews, I love breaking down complexity into experiences that feel simple, engaging, and human.</p>
+                    </div>
+
+                    <div class="skills-tags">
+                        <span>Automotive Writing</span>
+                        <span>UX/Product Design</span>
+                        <span>Photography</span>
+                        <span>React</span>
+                        <span>Figma</span>
+                        <span>Motorsport</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 5. Automotive Journalism --- -->
+        <section id="automotive" class="journalism-section">
+            <div class="container auto-container">
+                <div class="auto-header gs-reveal">
+                    <div class="section-tag">Journalism</div>
+                    <h2 class="section-heading-large">Driving the<br>Narrative.</h2>
+                    <div class="auto-header-bottom">
+                        <p>Reviews, technical deep dives, and opinion pieces published across major Indian automotive media.</p>
+                        <a href="#" id="view-all-articles" class="view-all-link">View All Articles <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="articles-list">
+                    <!-- Article 1 -->
+                    <a href="https://www.linkedin.com/posts/aryan-yadav-011641280_review-of-the-renault-duster-10l-techno-activity-7471280667910385665-yXKH" target="_blank" class="article-row gs-reveal">
+                        <div class="article-info">
+                            <div class="article-category">Review</div>
+                            <h3 class="article-title">Review of the Renault Duster 1.0L Techno</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/duster_new.jpg" alt="Renault Duster 2026 Techno Review">
+                        </div>
+                    </a>
+                    
+                    <!-- Article 2 -->
+                    <a href="https://www.linkedin.com/posts/aryan-yadav-011641280_bmw-has-been-endeavouring-to-replicate-the-activity-7471847883139604480-p9JX" target="_blank" class="article-row gs-reveal">
+                        <div class="article-info">
+                            <div class="article-category">Opinion</div>
+                            <h3 class="article-title">BMW has been endeavouring to replicate the formula</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/bmw.jpg" alt="BMW Article">
+                        </div>
+                    </a>
+                    
+                    <!-- Article 3 -->
+                    <a href="https://www.linkedin.com/posts/aryan-yadav-011641280_skoda-is-executing-a-masterclass-in-market-activity-7472211696485482496-nuUx" target="_blank" class="article-row gs-reveal">
+                        <div class="article-info">
+                            <div class="article-category">Market Strategy</div>
+                            <h3 class="article-title">Skoda is executing a masterclass in market placement</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/skoda.jpg" alt="Skoda Strategy Article">
+                        </div>
+                    </a>
+
+                    <!-- Article 4 -->
+                    <a href="https://www.linkedin.com/posts/aryan-yadav-011641280_the-new-generation-q3-appears-strong-on-both-activity-7473027893196140544-KIry" target="_blank" class="article-row gs-reveal hidden-article" style="display: none;">
+                        <div class="article-info">
+                            <div class="article-category">Review</div>
+                            <h3 class="article-title">The new generation Audi Q3 appears strong on both fronts</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/audi.png" alt="Audi Q3 Article">
+                        </div>
+                    </a>
+
+                    <!-- Article 5 -->
+                    <a href="https://www.linkedin.com/posts/aryan-yadav-011641280_after-being-dealt-a-hard-blow-by-enthusiasts-activity-7479071686412103680-FcCl" target="_blank" class="article-row gs-reveal hidden-article" style="display: none;">
+                        <div class="article-info">
+                            <div class="article-category">Opinion</div>
+                            <h3 class="article-title">After being dealt a hard blow by enthusiasts</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/ferrari.png" alt="Enthusiasts Article">
+                        </div>
+                    </a>
+
+                    <!-- Article 6 -->
+                    <a href="https://www.linkedin.com/pulse/tekton-looks-promising-nissan-doesnt-aryan-yadav-imgvc/" target="_blank" class="article-row gs-reveal hidden-article" style="display: none;">
+                        <div class="article-info">
+                            <div class="article-category">Opinion</div>
+                            <h3 class="article-title">TEKTON LOOKS PROMISING. NISSAN DOESN'T.</h3>
+                            <div class="article-meta">LinkedIn Published Article</div>
+                        </div>
+                        <div class="article-img-wrapper">
+                            <img src="assets/tekton.png" alt="Nissan Tekton Article">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 4. DrivenByAryan (Instagram Content) -->
+        <section id="driven-by-aryan" class="driven-section">
+            <h2 class="section-heading text-center gs-reveal">DrivenByAryan</h2>
+            <div class="horizontal-scroll-wrapper">
+                <div class="insta-cards-container">
+                    <!-- Card 1 -->
+                    <a href="https://www.instagram.com/drivenbyaryan/" target="_blank" class="insta-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card-image" style="background-image: url('assets/reel_duster.png'); background-size: cover; background-position: center;"></div>
+                        <div class="card-content">
+                            <h4>Duster 1.3 Impressions</h4>
+                            <p class="summary">First drive review of the new Renault Duster 1.3 turbo.</p>
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-eye"></i> 2,447</span>
+                                <div class="qr-placeholder"><i class="fa-solid fa-qrcode"></i></div>
+                            </div>
+                            <div class="key-takeaway">Takeaway: Power matters.</div>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="https://www.instagram.com/drivenbyaryan/" target="_blank" class="insta-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card-image" style="background-image: url('assets/reel_buttons.png'); background-size: cover; background-position: center;"></div>
+                        <div class="card-content">
+                            <h4>Why cars are losing physical buttons</h4>
+                            <p class="summary">Innovation or cost cutting in modern interiors?</p>
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-eye"></i> 1,904</span>
+                                <div class="qr-placeholder"><i class="fa-solid fa-qrcode"></i></div>
+                            </div>
+                            <div class="key-takeaway">Takeaway: Tangible feedback wins.</div>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="https://www.instagram.com/drivenbyaryan/" target="_blank" class="insta-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card-image" style="background-image: url('assets/reel_maruti.png'); background-size: cover; background-position: center;"></div>
+                        <div class="card-content">
+                            <h4>Why Maruti waited on EVs</h4>
+                            <p class="summary">Analyzing Maruti Suzuki's strategy for electric vehicles.</p>
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-eye"></i> 1,838</span>
+                                <div class="qr-placeholder"><i class="fa-solid fa-qrcode"></i></div>
+                            </div>
+                            <div class="key-takeaway">Takeaway: Timing is everything.</div>
+                        </div>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="https://www.instagram.com/drivenbyaryan/" target="_blank" class="insta-card" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card-image" style="background-image: url('assets/reel_honda.png'); background-size: cover; background-position: center;"></div>
+                        <div class="card-content">
+                            <h4>Honda City Facelift impressions</h4>
+                            <p class="summary">A look at the Honda City and its loyal following.</p>
+                            <div class="card-meta">
+                                <span><i class="fa-solid fa-eye"></i> 2,122</span>
+                                <div class="qr-placeholder"><i class="fa-solid fa-qrcode"></i></div>
+                            </div>
+                            <div class="key-takeaway">Takeaway: Evolution, not revolution.</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. UI/UX Design -->
+        <section id="uiux" class="uiux-section">
+            <div class="container">
+                <h2 class="section-heading text-right gs-reveal">Digital Product Design.</h2>
+                
+                <!-- Case Study 1 -->
+                <div class="case-study gs-reveal">
+                    <div class="cs-info">
+                        <h3>Live Train Notification</h3>
+                        <p class="cs-problem"><strong>Problem:</strong> Most railway apps fail to deliver timely, contextual information seamlessly during crucial moments like delays or platform changes.</p>
+                        <p class="cs-research"><strong>Research:</strong> Surveys showed 61% of users check apps multiple times before boarding, with 50% feeling frustrated by the repetitive process.</p>
+                        <div class="cs-stages">
+                            <span>User Research</span> &rarr; <span>Lock Screen UI</span> &rarr; <span>Iterations</span>
+                        </div>
+                        <p class="cs-outcome"><strong>Outcome:</strong> A proactive, real-time lock screen notification system that delivers glanceable updates without needing to open the app.</p>
+                        <a href="https://www.behance.net/gallery/230875967/Designing-a-Real-Time-Train-Notification-Experienceus-Redesign" target="_blank" style="display:inline-block; margin-top:20px; padding:10px 20px; border:1px solid var(--accent-red); color:var(--text-main); text-decoration:none; border-radius:5px; font-weight:bold;">View on Behance <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="images/train-notification.png" alt="Live Train Notification" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-study reverse gs-reveal">
+                    <div class="cs-info">
+                        <h3>Calm Communication</h3>
+                        <p class="cs-problem"><strong>Problem:</strong> Passenger anxiety during irregular flight events is exacerbated by uncertainty, silence, and vague announcements.</p>
+                        <div class="cs-stages">
+                            <span>Framework Design</span> &rarr; <span>Tone Guidelines</span> &rarr; <span>Implementation</span>
+                        </div>
+                        <p class="cs-outcome"><strong>Outcome:</strong> A design framework prioritizing safety and authority, avoiding emergency language or technical jargon to maintain a calm environment.</p>
+                        <a href="https://drive.google.com/drive/folders/1YejaUmWgPSL35tKQhtiJD2332JcpIahF" target="_blank" style="display:inline-block; margin-top:20px; padding:10px 20px; border:1px solid var(--accent-red); color:var(--text-main); text-decoration:none; border-radius:5px; font-weight:bold;">View Google Drive Folder <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="images/calm-communication.png" alt="Calm Communication" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="case-study gs-reveal">
+                    <div class="cs-info">
+                        <h3>GATHR</h3>
+                        <p class="cs-problem"><strong>Problem:</strong> Gen Z faces record-high loneliness. Social apps prioritize "profile aesthetics," causing awkward coordination and flaking.</p>
+                        <p class="cs-research"><strong>Research:</strong> Users feel 80% safer with college verification and are more likely to meet if the activity is determined first.</p>
+                        <div class="cs-stages">
+                            <span>Action-First Design</span> &rarr; <span>Spotify Integration</span> &rarr; <span>Neo-Brutalist UI</span>
+                        </div>
+                        <p class="cs-outcome"><strong>Outcome:</strong> A hyper-local social platform featuring an activities feed and a scarcity UX model to reduce flaking.</p>
+                        <a href="https://drive.google.com/file/d/19Mrb6GOSFoWRhn8GKiFCeu6U99H4JT3F/view" target="_blank" style="display:inline-block; margin-top:20px; padding:10px 20px; border:1px solid var(--accent-red); color:var(--text-main); text-decoration:none; border-radius:5px; font-weight:bold;">View Document <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="images/gathr-app.png" alt="GATHR App" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="case-study reverse gs-reveal">
+                    <div class="cs-info">
+                        <h3>Finance Tracker</h3>
+                        <p class="cs-problem"><strong>Problem:</strong> Users face record-high levels of financial disconnection. Apps prioritize aesthetics over intent, leading to abandonment.</p>
+                        <div class="cs-stages">
+                            <span>Journey Map</span> &rarr; <span>Prototyping</span> &rarr; <span>Design System</span>
+                        </div>
+                        <p class="cs-outcome"><strong>Outcome:</strong> An action-first financial tracking experience with a high-contrast Neo-Brutalist UI to encourage commitment and clarity.</p>
+                        <a href="https://drive.google.com/file/d/1w8PyD5ay5Dfd5StccE4Zb7MirJMzlSgY/view" target="_blank" style="display:inline-block; margin-top:20px; padding:10px 20px; border:1px solid var(--accent-red); color:var(--text-main); text-decoration:none; border-radius:5px; font-weight:bold;">View Document <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="images/finance-tracker.png" alt="Finance Tracker App" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+
+                <!-- Case Study 5 -->
+                <div class="case-study gs-reveal">
+                    <div class="cs-info">
+                        <h3>FlixBus Redesign</h3>
+                        <p class="cs-problem"><strong>Problem:</strong> The booking flow leaves users confused, especially when handling multiple passengers or selecting seats.</p>
+                        <p class="cs-research"><strong>Research:</strong> Cluttered UI, missing multi-seat booking, redundant return dates, and no exit confirmations caused major friction.</p>
+                        <div class="cs-stages">
+                            <span>User Journeys</span> &rarr; <span>Layout Simplification</span> &rarr; <span>Booking Flow</span>
+                        </div>
+                        <p class="cs-outcome"><strong>Outcome:</strong> A simplified, user-friendly interface enabling multi-seat selection, clear ticket cards, and easy booking management.</p>
+                        <a href="https://www.behance.net/gallery/230808341/FlixBus-Redesign" target="_blank" style="display:inline-block; margin-top:20px; padding:10px 20px; border:1px solid var(--accent-red); color:var(--text-main); text-decoration:none; border-radius:5px; font-weight:bold;">View on Behance <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="cs-visual">
+                        <img src="images/flixbus-redesign.png" alt="FlixBus Redesign" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6. Photography Gallery -->
+        <section id="photography" class="photography-section">
+            <h2 class="section-heading text-center gs-reveal" style="position: absolute; top: 100px; width: 100%; z-index: 10;">Cinematic Captures.</h2>
+            <div class="photo-grid">
+                <!-- Using uploaded photos -->
+                <div class="photo-item c-1" style="background-image: url('assets/cinematic-1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="photo-item c-2" style="background-image: url('assets/cinematic-2.jpg'); background-size: cover; background-position: center 70%;"></div>
+                <div class="photo-item c-3" style="background-image: url('assets/cinematic-3.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="photo-item c-4" style="background-image: url('assets/cinematic-4.jpg'); background-size: cover; background-position: center 75%;"></div>
+            </div>
+        </section>
+
+        <!-- --- Experience --- -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-tag gs-reveal">Experience</div>
+                <h2 class="section-heading-large gs-reveal">Professional <br><span class="muted">Track.</span></h2>
+
+                <div class="exp-card gs-reveal">
+                    <div class="exp-header">
+                        <h3>UI/UX Design Intern</h3>
+                        <span class="exp-date">Feb 2026 — May 2026</span>
+                    </div>
+                    <div class="exp-company">SoundSpire</div>
+                    <p class="exp-desc">
+                        Worked closely with product and design teams at an early-stage startup building the infrastructure for artist-owned superfandom. I took ownership of creating wireframes, developing UI components, and refining the overarching design system. By actively prototyping and testing, I helped smooth out complex user flows to ensure artists and fans had a seamless, highly engaging digital experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. Contact (Garage) -->
+        <section id="contact" class="garage-section">
+            <div class="garage-lighting"></div>
+            <div class="garage-content text-center gs-reveal">
+                <h2 class="section-heading">Park It Here.</h2>
+                <p class="hero-quote">Let's build the next great experience.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:aryan.y.yadav787@gmail.com" class="cta-button"><span>Email</span></a>
+                    <a href="https://www.linkedin.com/in/aryan-yadav-011641280/?skipRedirect=true" target="_blank" class="cta-button"><span>LinkedIn</span></a>
+                    <a href="https://www.instagram.com/drivenbyaryan/" target="_blank" class="cta-button"><span>DrivenByAryan</span></a>
+                    <a href="#" class="cta-button"><span>Resume</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Footer -->
+        <footer style="text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.05); background: var(--bg-main);">
+            <p>&copy; 2026 Aryan Yadav. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
