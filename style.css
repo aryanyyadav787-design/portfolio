@@ -367,13 +367,22 @@ section { padding: 120px 0; min-height: 100vh; position: relative; }
     .cursor, .cursor-follower { display: none !important; }
 
     
+    /* Global Mobile Headings */
+    .section-heading { font-size: 2.5rem; margin-bottom: 40px; }
+
     /* UI/UX */
     .case-study, .case-study.reverse { grid-template-columns: 1fr; gap: 30px; margin-bottom: 80px; }
     .case-study.reverse { direction: ltr; }
     .cs-info { border-left: 2px solid var(--accent-red); border-right: none; border-radius: 0 12px 12px 0; padding: 24px; }
     .case-study.reverse .cs-info { border-right: none; border-left: 2px solid var(--accent-red); border-radius: 0 12px 12px 0; text-align: left; }
     .cs-stages, .case-study.reverse .cs-stages { justify-content: flex-start; flex-wrap: wrap; }
-    .cs-info h3 { font-size: 2.5rem; }
+    .cs-info h3 { font-size: 1.8rem; margin-bottom: 12px; }
+    .cs-problem, .cs-research, .cs-outcome { font-size: 0.95rem; line-height: 1.5; }
+    .cs-stages span { font-size: 0.75rem; padding: 6px 12px; }
+    
+    /* Driven By Aryan / Cards */
+    .insta-card { width: 300px; }
+    .card-image { height: 180px; }
     
     /* Photography */
     .photo-grid { grid-template-columns: 1fr; height: auto; }
